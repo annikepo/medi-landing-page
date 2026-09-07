@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medi | Work Remotely</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: #111936;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: min(1000px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 1.5rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .navigation-list {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .navigation-list a {
+      color: #111936;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .signup-button,
+    .hero-button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 4px;
+      color: #ffffff;
+      background: #5656eb;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 520px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      max-width: 430px;
+      color: #17103e;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    .hero-description {
+      max-width: 420px;
+      margin-top: 1.5rem;
+      color: #929292;
+      line-height: 1.6;
+    }
+
+    .hero-button {
+      margin-top: 1.5rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+    }
+
+    .footer {
+      padding: 2rem 0;
+      color: #929292;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .header-content,
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .header-content {
+        display: grid;
+        justify-items: center;
+      }
+
+      .hero {
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .hero-title,
+      .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header contains the logo, navigation, and sign-up link -->
+  <header class="site-header">
+    <div class="container header-content">
+
+      <p class="logo">
+        Medi.
+      </p>
+
+      <nav aria-label="Main navigation">
+        <ul class="navigation-list">
+
+          <li>
+            <a href="#home">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#blog">
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <a class="signup-button" href="#contact">
+        Sign Up
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- Main hero section recreates the Figma landing-page layout -->
+  <main id="home">
+
+    <section class="container hero">
+
+      <div class="hero-content">
+
+        <h1 class="hero-title">
+          Stay Productive and Work Remotely
+        </h1>
+
+        <p class="hero-description">
+          The key to work-from-home success is to create an environment
+          that allows you to focus on the tasks at hand.
+        </p>
+
+        <a class="hero-button" href="#about">
+          Learn More
+        </a>
+
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="images/medi-illustration.png"
+          alt="Person meditating while working remotely"
+        >
+      </figure>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer text is placed inside a paragraph -->
+  <footer id="contact" class="footer">
+    <div class="container">
+
+      <p>
+        Copyright 2026 Medi. Figma recreation project.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
