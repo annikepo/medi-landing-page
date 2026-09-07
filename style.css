@@ -1,0 +1,325 @@
+/*
+  This CSS file controls the colors, layout,
+  spacing, typography, and responsive design.
+*/
+
+
+/* =========================
+   DESIGN VARIABLES
+========================= */
+
+:root {
+  --navy: #111936;
+  --heading: #17103e;
+  --purple: #5656eb;
+  --purple-dark: #4141c9;
+  --gray: #929292;
+  --white: #ffffff;
+  --page-width: 1000px;
+}
+
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--navy);
+  background-color: var(--white);
+
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(
+    var(--page-width),
+    calc(100% - 2rem)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  background-color: var(--white);
+}
+
+.header-content {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  color: var(--navy);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+
+/* Navigation styles */
+
+.navigation-list {
+  display: flex;
+  gap: 1.8rem;
+
+  list-style: none;
+}
+
+.navigation-list a {
+  color: #17172c;
+  font-size: 0.75rem;
+}
+
+.navigation-list a:hover {
+  color: var(--purple);
+}
+
+
+/* Sign-in and sign-up styles */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  color: #17172c;
+  font-size: 0.75rem;
+}
+
+.header-actions a:hover {
+  color: var(--purple);
+}
+
+.signup-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 82px;
+  min-height: 41px;
+  padding: 0.6rem 1rem;
+
+  border-radius: 4px;
+
+  color: var(--white);
+  background-color: var(--purple);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.signup-button:hover {
+  color: var(--white);
+  background-color: var(--purple-dark);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 560px;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 3rem 0 5rem;
+}
+
+.hero-content {
+  padding-left: 3rem;
+}
+
+.hero-title {
+  max-width: 430px;
+
+  color: var(--heading);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+
+/*
+  The heading wraps naturally because of its width.
+  CSS controls the layout instead of using a br tag.
+*/
+
+.hero-description {
+  max-width: 420px;
+  margin-top: 1.25rem;
+
+  color: var(--gray);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.hero-button {
+  display: inline-block;
+
+  margin-top: 2rem;
+  padding: 0.8rem 1.35rem;
+
+  border-radius: 4px;
+
+  color: var(--white);
+  background-color: var(--purple);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.hero-button:hover {
+  color: var(--white);
+  background-color: var(--purple-dark);
+}
+
+.hero-image {
+  width: min(100%, 520px);
+  justify-self: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  padding: 4rem 0;
+  background-color: #fafaff;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.about-title {
+  margin-bottom: 0.75rem;
+
+  color: var(--heading);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.about-text {
+  color: var(--gray);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  padding: 2rem 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.footer-text {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+  .header-content {
+    min-height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    padding: 1rem 0;
+
+    text-align: center;
+  }
+
+  .navigation-list,
+  .header-actions {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-left: 0;
+  }
+
+  .hero-title,
+  .hero-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation-list,
+  .header-actions {
+    gap: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+}
