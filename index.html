@@ -7,136 +7,44 @@
 
   <title>Medi | Work Remotely</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-    body {
-      color: #111936;
-      background: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-    .container {
-      width: min(1000px, calc(100% - 2rem));
-      margin: 0 auto;
-    }
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
 
-    .site-header {
-      padding: 1.5rem 0;
-    }
+  <link
+    rel="stylesheet"
+    href="styles/normalize.css"
+  >
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .navigation-list {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    .navigation-list a {
-      color: #111936;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
-
-    .signup-button,
-    .hero-button {
-      display: inline-block;
-      padding: 0.8rem 1rem;
-      border-radius: 4px;
-      color: #ffffff;
-      background: #5656eb;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
-
-    .hero {
-      min-height: 520px;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 3rem;
-    }
-
-    .hero-title {
-      max-width: 430px;
-      color: #17103e;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 4rem;
-      line-height: 1;
-    }
-
-    .hero-description {
-      max-width: 420px;
-      margin-top: 1.5rem;
-      color: #929292;
-      line-height: 1.6;
-    }
-
-    .hero-button {
-      margin-top: 1.5rem;
-    }
-
-    .hero-image img {
-      width: 100%;
-    }
-
-    .footer {
-      padding: 2rem 0;
-      color: #929292;
-      text-align: center;
-    }
-
-    @media (max-width: 700px) {
-      .header-content,
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .header-content {
-        display: grid;
-        justify-items: center;
-      }
-
-      .hero {
-        padding: 3rem 0;
-        text-align: center;
-      }
-
-      .hero-title,
-      .hero-description {
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-  </style>
+  <link
+    rel="stylesheet"
+    href="styles/style.css"
+  >
 </head>
 
 <body>
 
-  <!-- Header contains the logo, navigation, and sign-up link -->
   <header class="site-header">
     <div class="container header-content">
 
-      <p class="logo">
-        Medi.
-      </p>
+      <a
+        class="logo"
+        href="#home"
+      >
+        Medi<span class="logo-period">.</span>
+      </a>
 
       <nav aria-label="Main navigation">
         <ul class="navigation-list">
@@ -168,15 +76,25 @@
         </ul>
       </nav>
 
-      <a class="signup-button" href="#contact">
-        Sign Up
-      </a>
+      <div class="header-actions">
+
+        <a href="#contact">
+          Sign In
+        </a>
+
+        <a
+          class="signup-button"
+          href="#contact"
+        >
+          Sign Up
+        </a>
+
+      </div>
 
     </div>
   </header>
 
 
-  <!-- Main hero section recreates the Figma landing-page layout -->
   <main id="home">
 
     <section class="container hero">
@@ -192,7 +110,10 @@
           that allows you to focus on the tasks at hand.
         </p>
 
-        <a class="hero-button" href="#about">
+        <a
+          class="hero-button"
+          href="#about"
+        >
           Learn More
         </a>
 
@@ -207,14 +128,56 @@
 
     </section>
 
+    <section
+      id="about"
+      class="about-section"
+    >
+      <div class="container about-content">
+
+        <h2 class="about-title">
+          About Medi
+        </h2>
+
+        <p class="about-text">
+          Medi helps people create a calm and productive routine
+          while working remotely.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section
+      id="blog"
+      class="blog-section"
+    >
+      <div class="container blog-content">
+
+        <h2 class="blog-title">
+          Medi Blog
+        </h2>
+
+        <p class="blog-text">
+          Discover ideas about productivity, focus, and remote work.
+        </p>
+
+      </div>
+    </section>
+
   </main>
 
 
-  <!-- Footer text is placed inside a paragraph -->
-  <footer id="contact" class="footer">
+  <footer
+    id="contact"
+    class="site-footer"
+  >
     <div class="container">
 
-      <p>
+      <h2 class="footer-title">
+        Contact Medi
+      </h2>
+
+      <p class="footer-text">
         Copyright 2026 Medi. Figma recreation project.
       </p>
 
