@@ -1,4 +1,3 @@
-
 :root {
   --navy: #111936;
   --heading: #17103e;
@@ -6,6 +5,8 @@
   --purple-dark: #4141c9;
   --gray: #929292;
   --white: #ffffff;
+  --light-background: #fafaff;
+  --dark-background: #20212b;
   --page-width: 1000px;
 }
 
@@ -24,7 +25,7 @@ body {
   color: var(--navy);
   background-color: var(--white);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
@@ -48,6 +49,7 @@ img {
 }
 
 
+
 .site-header {
   background-color: var(--white);
 }
@@ -64,11 +66,14 @@ img {
 .logo {
   color: var(--navy);
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.35rem;
   font-weight: 700;
 }
 
+.logo-period {
+  color: var(--purple);
+}
 
 
 .navigation-list {
@@ -86,6 +91,7 @@ img {
 .navigation-list a:hover {
   color: var(--purple);
 }
+
 
 
 .header-actions {
@@ -145,13 +151,11 @@ img {
 
   color: var(--heading);
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
-
-
 
 .hero-description {
   max-width: 420px;
@@ -193,10 +197,9 @@ img {
 }
 
 
-
 .about-section {
   padding: 4rem 0;
-  background-color: #fafaff;
+  background-color: var(--light-background);
 }
 
 .about-content {
@@ -211,7 +214,7 @@ img {
 
   color: var(--heading);
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 2rem;
 }
 
@@ -221,17 +224,51 @@ img {
 
 
 
+.blog-section {
+  padding: 4rem 0;
+
+  color: var(--white);
+  background-color: var(--dark-background);
+
+  text-align: center;
+}
+
+.blog-content {
+  max-width: 600px;
+}
+
+.blog-title {
+  margin-bottom: 0.75rem;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+}
+
+.blog-text {
+  color: #c1bec0;
+}
+
+
 .site-footer {
-  padding: 2rem 0;
+  padding: 3rem 0;
+
   background-color: var(--white);
   text-align: center;
+}
+
+.footer-title {
+  margin-bottom: 0.75rem;
+
+  color: var(--heading);
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
 }
 
 .footer-text {
   color: var(--gray);
   font-size: 0.8rem;
 }
-
 
 
 @media (max-width: 800px) {
